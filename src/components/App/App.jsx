@@ -1,5 +1,6 @@
 import Form from '../form/form';
-import ListContact from '../listContacts/listContacts';
+import ListContact from '../ContactsList/ContactsList';
+import Loader from 'components/Loader/Loader';
 import { Filter } from '../filter/filter';
 import { Wrapper } from './App.styled';
 import { useSelector, useDispatch } from 'react-redux';
@@ -47,7 +48,7 @@ export default function App() {
       <h1>Phonebook</h1>
       <Form onSubmit={onAddContact} />
       <h1>Contacts</h1>
-      <p>We have: {contactsCount} books in our phonebook</p>
+      <p>You have: {contactsCount} books in our phonebook</p>
       <Filter
         type="text"
         value={filter}
@@ -56,7 +57,7 @@ export default function App() {
         placeholder="filter"
       />
       <ListContact items={contacts} removeContact={onRemoveContact} />
-      {loading && <p>...loading</p>}
+      {loading && <Loader />}
       {error && <p>oops, something went wrong</p>}
     </Wrapper>
   );
