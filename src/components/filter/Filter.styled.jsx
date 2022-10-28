@@ -4,14 +4,14 @@ export const FilterContainer = styled.div``;
 
 export const FilterName = styled.label`
   display: flex;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 15px;
   font-size: 20px;
   font-weight: bold;
 `;
 
 export const FilterInput = styled.input`
-  // display: flex;
+  margin-bottom: 15px;
   :focus {
     outline: none;
     border-radius: 3px;

@@ -17,3 +17,26 @@ export const DeleteBtn = styled.button`
     transform: scale(1.08);
   }
 `;
+
+export const Table = styled.table`
+  width: 500px;
+  margin-bottom: 20px;
+  border: 15px solid #f2f8f8;
+  border-top: 5px solid #f2f8f8;
+  border-collapse: collapse;
+`;
+
+export const TableTh = styled.th`
+  font-weight: bold;
+  padding: 5px;
+  background: #f2f8f8;
+  border: none;
+  border-bottom: 5px solid #f2f8f8;
+  text-align: left;
+  font-weight: normal;
+`;
+export const TableTd = styled.td`
+  padding: 5px;
+  border: none;
+  border-bottom: 5px solid #f2f8f8;
+`;
