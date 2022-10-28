@@ -11,7 +11,7 @@ const isDublicate = ({ name }, contacts) => {
 };
 
 export const fetchContacts = createAsyncThunk(
-  'contacts/fetch',
+  'contacts/fetchAll',
   async (_, thunkApi) => {
     try {
       const data = await api.getContacts();
@@ -23,7 +23,7 @@ export const fetchContacts = createAsyncThunk(
 );
 
 export const addContact = createAsyncThunk(
-  'contacts/add',
+  'contacts/addContact',
   async (data, { rejectWithValue }) => {
     try {
       const result = await api.addContact(data);
@@ -43,7 +43,7 @@ export const addContact = createAsyncThunk(
 );
 
 export const removeContact = createAsyncThunk(
-  'contacts/remove',
+  'contacts/deleteContact',
   async (id, { rejectWithValue }) => {
     try {
       await api.removeContact(id);
